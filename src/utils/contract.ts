@@ -57,12 +57,10 @@ export const calculateEggBuy = async (amount: string) => {
    return data;
 };
 
-export const enableAutoCompound = (
-   callback?: () => void
-) => {
+export const enableAutoCompound = (callback?: () => void) => {
    const contract = loadContract();
    contract.enableAutoCompounding({
-      value: ethers.utils.parseEther('0.1'),
+      value: ethers.utils.parseEther("0.1"),
       gasLimit: 6000000,
    });
    contract.on("autoCompounderEnabled", async () => {
@@ -79,15 +77,15 @@ export const disableAutoCompound = (callback?: () => void) => {
       });
 };
 
-export async function getNewbieEvents() {
-   // const bsc_jsonRPC_testnet = "https://data-seed-prebsc-1-s1.binance.org:8545/" // json RPC url
-   // const provider = new ethers.providers.JsonRpcProvider(bsc_jsonRPC_testnet) // provider for signing transaction
-   // const provider = new ethers.providers.Web3Provider((window as any).ethereum);
-   const contract = loadContract();
-   const filter = contract.filters.buyEvent();
-   console.log(await contract.queryFilter(filter, 24856033, 24856033 + 4000));
-   // return events;
-}
+// export async function getNewbieEvents() {
+//    // const bsc_jsonRPC_testnet = "https://data-seed-prebsc-1-s1.binance.org:8545/" // json RPC url
+//    // const provider = new ethers.providers.JsonRpcProvider(bsc_jsonRPC_testnet) // provider for signing transaction
+//    // const provider = new ethers.providers.Web3Provider((window as any).ethereum);
+//    const contract = loadContract();
+//    const filter = contract.filters.buyEvent();
+//    console.log(await contract.queryFilter(filter, 24856033, 24856033 + 4000));
+//    // return events;
+// }
 
 export async function getReferralLevels(userAddress: string) {
    const contract = loadContract();
