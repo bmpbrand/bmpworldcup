@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
+.wrap {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo {
+   align-self: flex-end;
+   margin: calc(2vh + 10px);
+}
+
+.logo img {
+   max-width: calc(64px + 4vmin);
+}
+
+.info {
+   width: 100%;
+   text-align: right;
+   /* background-color: rgba(0, 0, 0, 0.4); */
+   color: #fff;
+   letter-spacing: 0.08em;
+   font-weight: 900;
+   font-family: Oswald;
+   font-size: calc(1.4rem + 2vmin);
+   line-height: calc(2.4rem + 2vmin);
+   margin-top: 2vh;
+   padding: calc(2vh + 10px);
+   text-transform: uppercase;
+}
+
+.buttons {
+   margin-top: 3vh;
+   width: 40vmin;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: flex-end;
+   max-width: 320px;
+   margin-left: auto;
+}
+
+.subTitle {
+   font-size: 1.2rem;
+   padding-top: 1vh;
+}
+
+.subTitle a {
+   font-size: 0.95rem;
+   text-transform: none;
+   letter-spacing: normal;
+   vertical-align: top;
+}
+
+.bg-red {
+   background-color: #7ea154;
+   padding: 1%;
+   border-radius: 5px;
+}
+
+@media (min-width: 760px) {
+   .wrap {
+      min-height: 50vmin;
+   }
+}

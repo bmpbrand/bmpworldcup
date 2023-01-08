@@ -1,0 +1,21 @@
+.input {
+   height: 48px;
+   font-size: 22px;
+   min-width: 280px;
+   max-width: 280px;
+   text-align: center;
+   --tw-bg-opacity: 1;
+   /* background-color: rgba(18, 18, 18, var(--tw-bg-opacity)); */
+   --tw-text-opacity: 1;
+   /* color: rgba(255, 255, 255, var(--tw-text-opacity)); */
+   border-radius: 0.25rem;
+   border-width: 1px;
+   padding: 0.5rem;
+   font-weight: 500;
+   --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+   border-color: #6b7280;
+   line-height: 1.5rem;
+   margin-bottom: 2vh;
+}

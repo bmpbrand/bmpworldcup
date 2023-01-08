@@ -1,0 +1,33 @@
+.landing {
+   position: relative;
+   color: #fff;
+   margin: auto;
+   background-color: #3d3e3f;
+   text-align: center;
+}
+.video {
+   width: 100%;
+   margin-bottom: -8px;
+}
+
+.overlay {
+   position: absolute;
+   bottom: 0;
+   padding: 12px 10px;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   text-align: left;
+}
+.overlay h3,
+.overlay h1 {
+   margin: 0;
+}
+.tella {
+   color: #ff2900;
+}
+
+@media (min-width: 800px) {
+   .video {
+      width: 800px;
+   }
+}

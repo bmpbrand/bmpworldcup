@@ -1,0 +1,14 @@
+.header {
+   text-align: center;
+}
+
+.header img {
+   width: 64px;
+}
+
+.header img:nth-of-type(2) {
+   transform: rotateY(180deg);
+}
+.header b {
+   color: #fff;
+}

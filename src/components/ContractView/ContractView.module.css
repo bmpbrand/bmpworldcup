@@ -1,0 +1,28 @@
+.wrap h4 {
+   text-align: center;
+}
+.item {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   clear: both;
+}
+
+.tools {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+.links {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 0;
+}
+.links video {
+   width: 20vmin;
+   border-radius: 10px;
+}

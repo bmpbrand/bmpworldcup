@@ -1,0 +1,151 @@
+.App-link {
+   color: #61dafb;
+}
+
+.msg {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   margin: 0;
+}
+
+.landing {
+   background-image: url(./assets/header.jpg);
+   background-size: cover;
+   background-position: left;
+}
+.presale{
+   height: calc(32px + 10vmin);
+   width: calc(64px + 20vmin);
+   position: fixed;
+   bottom: 50px;
+   left: 20px;
+   border-radius: 10px;
+   background-image: url(./assets/presale.jpg);
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size: contain;
+   z-index: 1;
+   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.8);
+}
+.presale .link{
+   position: absolute;
+   bottom: -34px;
+   left: 0;
+   height: 40px;
+   width: 100%;
+   background-color: darkgreen;
+   color: #fff;
+   z-index: 2;
+   border: solid 2px #fff;
+   border-radius: 20px;
+   padding: 8px 0;
+   text-decoration: none;
+   font-weight: 600;
+   text-align: center;
+}
+
+.trading{
+   height: calc(32px + 10vmin);
+   width: calc(64px + 20vmin);
+   position: fixed;
+   bottom: calc(84px + 12vmin);
+   left: 20px;
+   border-radius: 10px;
+   background-image: url(./assets/trading.png);
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size: cover;
+   z-index: 1;
+   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.8);
+}
+.trading a{
+   text-decoration: none;
+}
+.trading p{
+   color: rgb(255, 251, 19);
+   font-weight: 600;
+   font-size: 1rem;
+   position: absolute;
+   bottom: 0;
+   margin-bottom: 0;
+   text-shadow: 1px 1px 0px rgb(0, 0, 0);
+}
+.trading p span{
+   font-size: 1.4rem;
+   text-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+.trading img{
+   width: 50%;
+   position: absolute;
+   transform: translateY(-50%);
+}
+
+section {
+   margin: 5vh 0;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+section .header {
+   height: 60vh;
+   background-position: top;
+   background-size: cover;
+}
+
+section .body {
+   padding: 10px;
+   margin-top: -15vmin;
+}
+
+section.contract .header {
+   background-image: url(./assets/buy.jpg);
+}
+
+section.buy .header {
+   background-image: url(./assets/contract.jpg);
+}
+
+section.referral .header {
+   background-image: url(./assets/referral.jpg);
+}
+
+.links {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding: 5px 10px;
+}
+
+.links video {
+   width: 20vmin;
+   border-radius: 10px;
+   padding: 5px;
+}
+
+.nos-wrap {
+   padding-top: 5px;
+   color: #000;
+}
+
+.nos {
+   font-size: 1.5rem;
+}
+
+@media (min-width: 480px) {
+
+   .main-wrap {
+      max-width: 760px;
+      margin: auto;
+   }
+
+   .video {
+      max-width: 1265px;
+   }
+}

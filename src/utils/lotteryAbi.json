@@ -1,0 +1,208 @@
+[
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "generateRandom",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8[]"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "_adr",
+                "type": "address"
+            }
+        ],
+        "name": "getUserTickets",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "newAddress",
+                "type": "address"
+            }
+        ],
+        "name": "changeContract",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "cycle",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "drawRound",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getLotteryStats",
+        "outputs": [
+            {
+                "name": "roundId",
+                "type": "uint256"
+            },
+            {
+                "name": "jackpot",
+                "type": "uint256"
+            },
+            {
+                "name": "tickets",
+                "type": "uint256"
+            },
+            {
+                "name": "start",
+                "type": "uint256"
+            },
+            {
+                "name": "prevJackpot",
+                "type": "uint256"
+            },
+            {
+                "name": "prevWinners",
+                "type": "address[]"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "currentRound",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "rounds",
+        "outputs": [
+            {
+                "name": "startTime",
+                "type": "uint256"
+            },
+            {
+                "name": "jackpot",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "changeOwner",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "supportedContract",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "guesses",
+                "type": "uint8[5]"
+            }
+        ],
+        "name": "buyTicket",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "user",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "guesses",
+                "type": "uint8[5]"
+            }
+        ],
+        "name": "buyEvent",
+        "type": "event"
+    }
+]

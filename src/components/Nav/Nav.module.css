@@ -1,0 +1,21 @@
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 8px 12px;
+   background-color: rgb(47 52 58 / 30%);
+   color: #fff;
+   width: 100%;
+   position: absolute;
+   top: 0;
+}
+
+.logo {
+   font-size: calc(20px + 2vmin);
+   cursor: pointer;
+}
+
+.logo h4 {
+   margin: 0;
+   font-size: calc(1.1rem + 0.65vw);
+}

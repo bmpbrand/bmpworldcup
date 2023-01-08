@@ -1,0 +1,14 @@
+.wrap {
+    position: fixed;
+    z-index: 1000000;
+    right: 10px;
+    bottom: 10px;
+    width: 20vmin;
+    height: 20vmin;
+}
+
+.video {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 10px;
+}

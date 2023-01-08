@@ -1,0 +1,13 @@
+.wrap {
+   color: #202020;
+}
+.wrap a {
+   color: cornflowerblue;
+}
+
+.wrap a:active {
+   border: none;
+}
+.wrap ul {
+   list-style: none;
+}

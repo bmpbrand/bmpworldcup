@@ -1,0 +1,57 @@
+.wrap {
+   border-radius: 20px;
+}
+
+.tools {
+   display: flex;
+   justify-content: space-around;
+}
+
+.item {
+   margin-bottom: 20px;
+}
+
+.item div {
+   text-align: center;
+}
+
+.label {
+   color: #000;
+   font-family: "Fredoka One", cursive;
+   font-size: calc(10px + 1vmin);
+}
+
+.value {
+   color: #082ad5;
+   font-family: "Fredoka One", cursive;
+   font-size: calc(24px + 1vmin);
+   font-weight: 900;
+}
+
+.labels {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.levelsWrap {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.level {
+   width: 20vmin;
+   height: 20vmin;
+   border-radius: 50%;
+   border: solid 1vmin #fff;
+   margin: 1.5vmin;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../../assets/ball.png);
+   background-size: contain;
+}

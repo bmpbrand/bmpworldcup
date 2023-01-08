@@ -1,0 +1,8 @@
+.wrap {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.wrap a {
+   line-height: 4rem;
+}

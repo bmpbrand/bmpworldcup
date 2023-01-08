@@ -1,0 +1,51 @@
+.wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.wrap div {
+   margin: 5px;
+   border: 6px solid #fff;
+   border-radius: 50%;
+   width: 20vmin;
+   height: 20vmin;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding: 0;
+   background-image: url(../../assets/ball.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   color: #000;
+   font-weight: 700;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.daysWrap {
+   border-color: #e7ca75 !important;
+}
+
+.hoursWrap {
+   border-color: #5c8dea !important;
+}
+
+.minsWrap {
+   border-color: #bb3330 !important;
+}
+
+.content {
+   font-size: calc(24px + 2vmin);
+   font-family: "Fredoka One", cursive;
+   color: transparent;
+   background-image: linear-gradient(#f7e064, #dc7b5a);
+   -webkit-background-clip: text;
+   background-clip: text;
+   /* text-shadow: 0 0 5px rgb(0 0 0 / 50%); */
+   /* padding: 10px 0; */
+}
+
+.label {
+   font-size: 0.6rem;
+}

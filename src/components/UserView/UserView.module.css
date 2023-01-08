@@ -1,0 +1,78 @@
+.tools {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-top: 20px;
+}
+
+.total {
+   margin-top: 20px;
+   font-weight: 600;
+   text-align: center;
+   font-size: calc(18px + 2vmin);
+   border: 1px solid #6085f7;
+   border-radius: 24px;
+   background-color: chocolate;
+   color: #fff;
+   padding: 5px 0;
+   background-image: url(../../assets/bnb.png);
+   background-position: right;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.allowed {
+   color: #3aef3a;
+   text-align: center;
+}
+
+.allowed img {
+   height: 48px;
+}
+
+.blocked {
+   text-align: center;
+   color: red;
+}
+
+.blocked img {
+   height: 48px;
+}
+
+.timer {
+   font-weight: 600;
+   font-size: 1.5rem;
+}
+
+.normal {
+   color: #fff;
+   font-size: 1.1 rem;
+   font-weight: 300;
+}
+
+.labels {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.autoReinvest {
+   padding: 20px 0;
+   text-align: center;
+}
+
+.danger {
+   border: red solid 2px;
+   border-radius: 5px;
+   background-image: url(../../assets/danger.gif);
+   background-size: contain;
+   background-position: left;
+   background-repeat: no-repeat;
+   height: 120px;
+   max-width: 320px;
+   padding-left: 92px;
+   margin: 10px auto;
+   background-color: #fff;
+   color: #000;
+}
