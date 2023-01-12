@@ -226,6 +226,14 @@ function App() {
                   <source src="dial.mp4" type="video/mp4" />
                </video>
             </a>
+            <a
+               href="https://avengersroi.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc"
+               title="Avengers"
+            >
+               <video autoPlay loop muted playsInline>
+                  <source src="avengers.mp4" type="video/mp4" />
+               </video>
+            </a>
          </div>
          {!active && (
             <div className="center">
@@ -290,147 +298,32 @@ function App() {
          </section>
          {/* <Dial /> */}
          {
-            <Help
-               showHelp={showWelcome}
-               onClose={() => {
-                  setShowWelcome(false);
-                  setShowModal(true);
-               }}
-            >
+            <Help showHelp={showWelcome} onClose={() => setShowWelcome(false)}>
                <div>
-                  <h4>📰 BMP BRAND NEWS 📰</h4>
-                  <p>
-                     ✔️ Signed partnership agreement with one of the world's
-                     largest brokers TOP FX. This will generate the first
-                     profits and will bring new liquidity to all our Dapps.
-                  </p>
-                  <p>
-                     ✔️ Also shortly there will be the launch of the next dapp.
-                  </p>
+                  <h4>🚀🚀☄ WELCOME TO☄🚀🚀</h4>
 
-                  <p>✔️ Opportunity Contest still active.</p>
-
+                  <h4> 💪THE AVENGER'S ROI GAME 💪</h4>
                   <p>
-                     🤔 For info on how to participate, join our official
-                     channel or send a private message to 📱
-                     @Silene_Oliveira_TPH
+                     🔋 ALL TRADING DONATIONS WILL GO TO THE DAPP TO ENSURE ALL
+                     PLAYERS GET ROI .💵
                   </p>
 
                   <p>
-                     <a href="https://t.me/BMPBrandDDB">📱OFFICIAL CHANNEL</a>
+                     🕹And you Gamer, are you ready to play your game to get to
+                     your winning endgame?
                   </p>
-                  <h4>
-                     💪 BMP BRAND CHOOSE THE FUTURE IN DAPP. THE BMP BRAND IS
-                     HERE NOW‼
-                  </h4>
+
+                  <p>🍀Good luck and let's play</p>
+
+                  <p>
+                     <a href="https://avengersroi.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc">
+                        📌JOIN US 🌍
+                     </a>
+                  </p>
                </div>
             </Help>
          }
-         <Help showHelp={showModal} onClose={() => setShowModal(false)}>
-            <div>
-               <h4>🕶👍VIP CONTEST 👍🕶</h4>
 
-               <p>
-                  STARTING FROM 5th DECEMBER YOU WILL HAVE 2 chances to join in
-                  the VIP👑 group:
-               </p>
-
-               <p>🔅 Limited pass 🎟</p>
-               <p>🔆 Unlimited Pass 🎫</p>
-
-               <h4>🔩 GAME RULES 🎮</h4>
-
-               <p>
-                  PASS LIMITED 🎟 to stay until the launch and get the world
-                  preview link along with the other group benefits of the next
-                  dapp.
-               </p>
-               <p>
-                  ➡️ Deposit 0.5 Bnb or more in 2 any Dapp (0.5+0.5) of the
-                  brand or
-               </p>
-               <p>➡️ Deposit 1 BnB or more in any one Dapp.</p>
-
-               <p>UNLIMITED PASS 🎫 to the VIP group 👑 to stay forever.</p>
-
-               <p>➡️ Deposit 2 BnB or more in 2 Dapps (1+1) of the brand.</p>
-
-               <p>➡️ Deposit 2 BnB or more in any Dapp.</p>
-
-               <p>
-                  ☁️ FOR INFO Contact{" "}
-                  <a href="https://t.me/Silene_Oliveira_TPH">
-                     @Silene_Oliveira_TPH
-                  </a>
-               </p>
-               <p>
-                  <a href="https://forms.gle/xthCHevNqYVrMedc9">
-                     ✍️ FILL OUT THE FORM to be added‼️
-                  </a>
-               </p>
-
-               <p>
-                  {" "}
-                  🆘 NB. THE CONTEST IS NOT RETROACTIVE. No deposits prior to
-                  the launch date are allowed.
-               </p>
-
-               <p>💎💎💎💎💎💎💎💎💎💎💎</p>
-
-               <h4>🕶👍VIP CONTEST 👍🕶</h4>
-
-               <p>
-                  A PARTIRE DAL 5 DICEMBRE AVRAI 2 possibilità per entrare nel
-                  gruppo Vip👑:
-               </p>
-
-               <p>🔅 Pass limitato 🎟</p>
-               <p>🔆 Pass Illimitato 🎫</p>
-
-               <h4>🔩 REGOLE DI GIOCO 🎮</h4>
-
-               <p>
-                  PASS LIMITATO 🎟 per rimanere fino al lancio e ottenere il link
-                  in anteprima mondiale insieme agli altri benefici del gruppo,
-                  della prossima dapp uscente.
-               </p>
-
-               <p>
-                  {" "}
-                  ➡️ Deposita 0.5 Bnb o più in 2 qualsiasi Dapp (0.5+0.5) del
-                  brand o
-               </p>
-
-               <p> ➡️ Deposita 1 BnB o più in una qualsiasi Dapp.</p>
-
-               <p>
-                  PASS ILLIMITATO 🎫 al gruppo Vip👑 per rimanere per sempre.
-               </p>
-
-               <p>➡️ Deposita 2 Bnb o più in 2 Dapp (1+1) del brand.</p>
-
-               <p>➡️ Deposita 2 BnB o più in una qualsiasi Dapp.</p>
-
-               <p>💎 GRUPPO VIP👑 IL MASSIMO</p>
-
-               <p>
-                  ☁️ PER INFO Contatta{" "}
-                  <a href="https://t.me/Silene_Oliveira_TPH">
-                     @Silene_Oliveira_TPH
-                  </a>
-               </p>
-               <p>
-                  <a href="https://forms.gle/xthCHevNqYVrMedc9">
-                     ✍️ COMPILA IL FORM per essere aggiunto‼️
-                  </a>
-               </p>
-
-               <p>
-                  🆘 NB. IL CONTEST NON È RETROATTIVO. Non sono ammessi depositi
-                  precedenti la data di lancio.
-               </p>
-            </div>
-         </Help>
          {/* <Footer /> */}
          {/* {showWelcome ? <Welcome hide={() => onEnter()} /> : null} */}
          {/* <Audio ref={audioRef} /> */}
