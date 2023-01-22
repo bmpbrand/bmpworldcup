@@ -198,11 +198,11 @@ function App() {
                   <source src="logobmp.mp4" type="video/mp4" />
                </video>
             </a>
-            <a href="https://wadjetegyptianminer.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc">
+            {/* <a href="https://wadjetegyptianminer.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc">
                <video autoPlay loop muted playsInline>
                   <source src="logowadjet.mp4" type="video/mp4" />
                </video>
-            </a>
+            </a> */}
             <a href="https://fandfbnb.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc">
                <video autoPlay loop muted playsInline>
                   <source src="logoff.mp4" type="video/mp4" />
