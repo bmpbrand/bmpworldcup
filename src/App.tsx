@@ -221,11 +221,11 @@ function App() {
                   <source src="logopaper.mp4" type="video/mp4" />
                </video>
             </a>
-            <a href="https://t.me/ilprofessorelacasadicartaa" title="Marketing">
+            {/* <a href="https://t.me/ilprofessorelacasadicartaa" title="Marketing">
                <video autoPlay loop muted playsInline>
                   <source src="dial.mp4" type="video/mp4" />
                </video>
-            </a>
+            </a> */}
             <a
                href="https://avengersroi.com/?ref=0x46310b73BabDde141EB44AfBF538013B0F65F1dc"
                title="Avengers"
