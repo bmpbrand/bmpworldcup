@@ -7,7 +7,7 @@ import Box from "../Box/Box";
 import { useEffect, useState } from "react";
 import { getReferralLevels } from "../../utils/contract";
 
-const baseUrl = "https://bmpworldcup.com/app";
+const baseUrl = "https://bmpworldcup.com";
 
 export const ReferralView = ({
    refBonus,
@@ -16,7 +16,7 @@ export const ReferralView = ({
    totalInvestment: string;
 }) => {
    const { account } = useWeb3React();
-   const [levels, setLevels] = useState([] as number[])
+   const [levels, setLevels] = useState([] as number[]);
    function handleClick() {
       if (account) {
          copy(`${baseUrl}?ref=${account}`);
@@ -40,9 +40,9 @@ export const ReferralView = ({
          </div>
          <Box header="REFERRAL">
             <p>
-               There are 15 levels of referral bonus. 10%, 3%, 1%, 1%, 1%, 0.5%, 0.5%, 0.5%, 0.5%, 0.5%,
-               0.3%, 0.3%, 0.3%, 0.3%, 0.3%. The referral
-               bonus will paid as CUP on new deposits.
+               There are 15 levels of referral bonus. 10%, 3%, 1%, 1%, 1%, 0.5%,
+               0.5%, 0.5%, 0.5%, 0.5%, 0.3%, 0.3%, 0.3%, 0.3%, 0.3%. The
+               referral bonus will paid as CUP on new deposits.
             </p>
 
             <div className={styles.tools}>
@@ -52,18 +52,16 @@ export const ReferralView = ({
             </div>
             <h1 className="center">Referral Details</h1>
             <div className={styles.levelsWrap}>
-               {
-                  levels.map((x, i) => {
-                     return <div key={i} className={styles.level}>
+               {levels.map((x, i) => {
+                  return (
+                     <div key={i} className={styles.level}>
                         <span className={styles.value}>{x}</span>
                         <span className={styles.label}>Level {i + 1}</span>
                      </div>
-                  })
-               }
+                  );
+               })}
             </div>
          </Box>
-
       </>
-
    );
 };
