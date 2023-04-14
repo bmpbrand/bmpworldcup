@@ -24,10 +24,11 @@ function withdrawalAllowed(
 ) {
    var d = days(distance);
    if (autoCompound) return false;
-   if (autoCompoundTime >= cycleStart(checkpoint)) return true;
-   return (
-      d >= 13 && d % 14 === 13 && (hatchery & (2 ** 13 - 1)) === 2 ** 13 - 1
-   );
+   if (d >= 13 && d % 14 === 13) {
+      if (autoCompoundTime >= cycleStart(checkpoint)) return true;
+      return (hatchery & (2 ** 13 - 1)) === 2 ** 13 - 1;
+   }
+   return false;
 }
 
 export interface IUserViewProps {
