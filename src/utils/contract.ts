@@ -2,6 +2,7 @@ import { ethers, utils } from "ethers";
 import abi from "./api.json";
 import { getSigner } from "./walletApi";
 
+// export const contractAddress = "0x8Cb6C4E8b35214bC6BaC01431F08A5115154441A";
 export const contractAddress = "0xF74273C6716Ce3CD13Eea88ab982bb2d4AaC6Aeb";
 
 export const loadContract = () => {

@@ -44,6 +44,7 @@ function App() {
       checkpoint: "0",
       hatchery: "0",
       userAutoCompound: "0",
+      userAutoCompoundTime: "0",
    });
    // const [count, setCount] = useState("0");
    const [showModal, setShowModal] = useState(false);
@@ -98,6 +99,7 @@ function App() {
                   data[7].toNumber()
                ).toString(),
                userAutoCompound: data[15].toNumber(),
+               userAutoCompoundTime: data[16].toNumber(),
             });
          }
       },
@@ -262,6 +264,7 @@ function App() {
                   eggs={stats.userEggs}
                   lastHatch={stats.userLastHatch}
                   autoCompound={+stats.userAutoCompound === 1}
+                  autoCompoundTime={+stats.userAutoCompoundTime}
                />
                <ItemSelectList submitHandler={handleBuy} />
             </div>

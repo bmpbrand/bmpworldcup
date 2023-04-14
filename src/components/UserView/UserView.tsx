@@ -1,4 +1,9 @@
-import { disableAutoCompound, enableAutoCompound, hatchEggs, sellEggs } from "../../utils/contract";
+import {
+   disableAutoCompound,
+   enableAutoCompound,
+   hatchEggs,
+   sellEggs,
+} from "../../utils/contract";
 import { DAY, days, now } from "../../utils/time_util";
 import { Button } from "../Button/Button";
 import { CycleIndicator } from "../CycleIndicator/CycleIndicator";
@@ -6,9 +11,20 @@ import Label from "../Label/Label";
 import { Timer } from "../Timer/Timer";
 import styles from "./UserView.module.css";
 
-function withdrawalAllowed(distance: number, hatchery: number, autoCompound: boolean) {
+function cycleStart(checkpoint: number) {
+   return checkpoint + Math.floor((now() - checkpoint) / (14 * DAY)) * 14 * DAY;
+}
+
+function withdrawalAllowed(
+   distance: number,
+   hatchery: number,
+   autoCompound: boolean,
+   autoCompoundTime: number,
+   checkpoint: number
+) {
    var d = days(distance);
-   if (autoCompound) return d >= 13 && d % 14 === 13;
+   if (autoCompound) return false;
+   if (autoCompoundTime >= cycleStart(checkpoint)) return true;
    return (
       d >= 13 && d % 14 === 13 && (hatchery & (2 ** 13 - 1)) === 2 ** 13 - 1
    );
@@ -25,6 +41,7 @@ export interface IUserViewProps {
    hatchery: string;
    lastHatch: string;
    autoCompound: boolean;
+   autoCompoundTime: number;
 }
 
 export const UserView = ({
@@ -37,9 +54,9 @@ export const UserView = ({
    checkpoint,
    hatchery,
    lastHatch,
-   autoCompound
+   autoCompound,
+   autoCompoundTime,
 }: IUserViewProps) => {
-
    function handleDisable() {
       disableAutoCompound();
    }
@@ -58,19 +75,30 @@ export const UserView = ({
          {/* <Label label="Total Invested" value={invested} /> */}
          {/* <div className={styles.total}>{grogBNB}</div> */}
          <div className={styles.autoReinvest}>
-            <h1>Auto-Compound {autoCompound ? + lastHatch + 13 * DAY < now() ? "EXPIRED" : "ENABLED" : "DISABLED"}</h1>
-            {autoCompound && +lastHatch + 13 * DAY > now() && <Timer origin={+lastHatch + (13 * DAY)} />}
-            {
-               autoCompound ? <Button onClick={handleDisable}>Disable</Button> :
-                  <Button onClick={handleEnable}>ENABLE</Button>
-            }
-            {
-               autoCompound && ((Math.floor((now() - (+checkpoint)) / DAY) % 14) === 12) &&
-               <div className={styles.danger}>
-                  If you want to <b>WITHDRAW</b> tomorrow, disable auto-compound.
-                  The sooner you disable the more dividens you can withdraw.
-               </div>
-            }
+            <h1>
+               Auto-Compound{" "}
+               {autoCompound
+                  ? +lastHatch + 13 * DAY < now()
+                     ? "EXPIRED"
+                     : "ENABLED"
+                  : "DISABLED"}
+            </h1>
+            {autoCompound && +lastHatch + 13 * DAY > now() && (
+               <Timer origin={+lastHatch + 13 * DAY} />
+            )}
+            {autoCompound ? (
+               <Button onClick={handleDisable}>Disable</Button>
+            ) : (
+               <Button onClick={handleEnable}>ENABLE</Button>
+            )}
+            {autoCompound &&
+               Math.floor((now() - +checkpoint) / DAY) % 14 === 12 && (
+                  <div className={styles.danger}>
+                     If you want to <b>WITHDRAW</b> tomorrow, disable
+                     auto-compound. The sooner you disable the more dividens you
+                     can withdraw.
+                  </div>
+               )}
          </div>
          {+invested > 0 && (
             <div>
@@ -83,18 +111,19 @@ export const UserView = ({
                   />
                )}
                <div className={styles.tools}>
-
                   {withdrawalAllowed(
                      new Date().getTime() / 1000 - parseInt(checkpoint),
                      parseInt(hatchery),
-                     autoCompound
+                     autoCompound,
+                     autoCompoundTime,
+                     +checkpoint
                   ) ? (
                      <Button onClick={() => sellEggs()} bgColor="green">
                         GOAL
                      </Button>
                   ) : null}
-                  {
-                     !autoCompound && <Button
+                  {!autoCompound && (
+                     <Button
                         onClick={() => {
                            hatchEggs();
                         }}
@@ -102,7 +131,7 @@ export const UserView = ({
                      >
                         WORKOUT
                      </Button>
-                  }
+                  )}
                </div>
             </div>
          )}
